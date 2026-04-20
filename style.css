@@ -15,68 +15,98 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 nav {
   display: flex;
   justify-content: center;
-  background: #020617;
-  padding: 15px;
+  align-items: center;
+  gap: 25px;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav a {
   color: #e2e8f0;
-  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #38bdf8;
+  transform: translateY(-2px);
 }
 
-/* HEADER (HERO) */
+/* ================= HERO ================= */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #1e293b, #0f172a);
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 header h2 {
   color: #38bdf8;
-  margin: 10px 0;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+header p {
+  max-width: 600px;
+  margin: 15px auto;
+  opacity: 0.85;
 }
 
 /* HERO BUTTONS */
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .hero-buttons a {
-  background: #38bdf8;
-  color: black;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 12px 22px;
   margin: 5px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-.hero-buttons a:hover {
+/* primary button */
+.hero-buttons a:first-child {
+  background: #38bdf8;
+  color: #000;
+}
+
+.hero-buttons a:first-child:hover {
   background: #0ea5e9;
+  transform: translateY(-3px);
 }
 
-/* SECTIONS */
-section {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
+/* secondary button */
+.hero-buttons a:last-child {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
 
-  /* Animation */
+.hero-buttons a:last-child:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
@@ -87,52 +117,78 @@ section.show {
   transform: translateY(0);
 }
 
-/* SECTION TITLES */
+/* section title */
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-left: 4px solid #38bdf8;
   padding-left: 10px;
+  font-size: 1.8rem;
 }
 
-/* PROJECT CARDS */
+/* ================= SKILLS ================= */
+#skills p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ================= PROJECTS ================= */
 .project {
   background: #1e293b;
   padding: 20px;
-  margin-top: 15px;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .project a {
   color: #38bdf8;
+  margin-right: 10px;
   display: inline-block;
   margin-top: 10px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* IMAGES */
-img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 10px 0;
+.project a:hover {
+  text-decoration: underline;
 }
 
-/* LINKS & BUTTON HOVER */
-button, a {
-  transition: all 0.3s ease;
+/* ================= CONTACT ================= */
+#contact a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
-button:hover, a:hover {
-  transform: scale(1.05);
+#contact a:hover {
+  text-decoration: underline;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   color: #94a3b8;
+  margin-top: 40px;
+  border-top: 1px solid #1e293b;
+}
+
+/* ================= GLOBAL HOVER EFFECT ================= */
+a {
+  transition: 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.03);
 }
