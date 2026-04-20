@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const typingElement = document.getElementById("typing");
 
   if (typingElement) {
-    const text = "Frontend Developer | JavaScript | API Integration";
+    const text = "Building real-world web apps | JavaScript | APIs | Problem Solver";
     let index = 0;
 
     function typeEffect() {
