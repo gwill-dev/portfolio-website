@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Uchechukwu | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <p id="typing"></p>
 </head>
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+
 <body>
 
-  <header>
-  <h1>Amadi Uchechukwu</h1>
-  <p>Frontend Developer | JavaScript | API Integration</p>
-</header>
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <!-- HEADER -->
+  <header>
+    <h1>Hi, I'm Uchechukwu 👋</h1>
+    <h2 id="typing"></h2>
+
+    <div class="hero-buttons">
+      <a href="#projects">View Projects</a>
+      <a href="cv.pdf" download>Download CV</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -28,54 +38,56 @@
     </p>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
-  <h2>Skills</h2>
-  <p>HTML • CSS • JavaScript • Python • Git • GitHub</p>
-</section>
+    <h2>Skills</h2>
+    <p>HTML • CSS • JavaScript • Python • Git • GitHub</p>
+  </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
       <h3>To-Do App</h3>
+      <img src="/media/to-do-list-app.png">
       <p>Task management app using JavaScript</p>
-      <a href="https://github.com/gwill-dev/TO-DO-APP" target="_blank">GitHub</a>
-      <br>
-        <a href="https://gwill-dev.github.io/TO-DO-APP/" target="_blank">Live Demo</a>
-        <img src="/media/to-do-list-app.png" width="100%">
+      <a href="https://github.com/gwill-dev/TO-DO-APP" target="_blank">GitHub</a><br>
+      <a href="https://gwill-dev.github.io/TO-DO-APP/" target="_blank">Live Demo</a>
     </div>
 
     <div class="project">
-  <h3>Weather App 🌦️</h3>
-
-  <img src="/media/weather-long (2).png">
-
-  <p>Real-time weather application using API integration.</p>
-
-  <a href="https://gwill-dev.github.io/weather-app/" target="_blank">Live Demo</a><br>
-  <a href="https://github.com/gwill-dev/weather-app" target="_blank">GitHub</a>
-</div>
+      <h3>Weather App 🌦️</h3>
+      <img src="/media/weather-long (2).png">
+      <p>Real-time weather application using API integration.</p>
+      <a href="https://gwill-dev.github.io/weather-app/" target="_blank">Live Demo</a><br>
+      <a href="https://github.com/gwill-dev/weather-app" target="_blank">GitHub</a>
+    </div>
 
     <div class="project">
       <h3>Calculator App</h3>
+      <img src="/media/calculate-app (2).png">
       <p>Simple calculator using JavaScript</p>
-      <a href="https://github.com/gwill-dev/calculator-app" target="_blank">GitHub</a>
-      <br>
+      <a href="https://github.com/gwill-dev/calculator-app" target="_blank">GitHub</a><br>
       <a href="https://gwill-dev.github.io/calculator-app/" target="_blank">Live Demo</a>
-      <img src="/media/calculate-app (1).png" width="100%">
     </div>
 
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact: </h2>
+    <h2>Contact</h2>
     <p>Email: uchegwillama@gmail.com</p>
-    <p>Phone: +234 8160651440 </p>
+    <p>Phone: +234 8160651440</p>
+    <a href="https://github.com/gwill-dev" target="_blank">GitHub</a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Uchechukwu</p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
