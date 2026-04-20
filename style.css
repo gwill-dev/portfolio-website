@@ -192,3 +192,13 @@ a {
 a:hover {
   transform: scale(1.03);
 }
+body {
+  background: radial-gradient(circle at top, #1e293b, #0f172a);
+}
+section {
+  margin: 60px auto;
+}
+.project img {
+  height: 180px;
+  object-fit: cover;
+}
