@@ -5,6 +5,10 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f172a;
   color: #e2e8f0;
@@ -32,18 +36,38 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* HEADER */
+/* HEADER (HERO) */
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
-header p {
-  color: #94a3b8;
+header h2 {
+  color: #38bdf8;
+  margin: 10px 0;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons a {
+  background: #38bdf8;
+  color: black;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-buttons a:hover {
+  background: #0ea5e9;
 }
 
 /* SECTIONS */
@@ -51,6 +75,23 @@ section {
   max-width: 800px;
   margin: 30px auto;
   padding: 20px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SECTION TITLES */
+h2 {
+  margin-bottom: 10px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
 }
 
 /* PROJECT CARDS */
@@ -59,11 +100,12 @@ section {
   padding: 20px;
   margin-top: 15px;
   border-radius: 12px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .project a {
@@ -79,23 +121,7 @@ img {
   margin: 10px 0;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #94a3b8;
-}
-
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* LINKS & BUTTON HOVER */
 button, a {
   transition: all 0.3s ease;
 }
@@ -103,11 +129,10 @@ button, a {
 button:hover, a:hover {
   transform: scale(1.05);
 }
-.project {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
 }
