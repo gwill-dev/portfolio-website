@@ -4,87 +4,130 @@
   <meta charset="UTF-8">
   <title>Uchechukwu | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <h2 class="logo">Uchechukwu</h2>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Hi, I'm Uchechukwu 👋</h1>
-    <h2 id="typing"></h2>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Uchechukwu 👋</h1>
 
-    <div class="hero-buttons">
-      <a href="#projects">View Projects</a>
-      <a href="cv.pdf" download>Download CV</a>
+      <h2 id="typing">Frontend Developer</h2>
+
+      <p>
+        Electrical & Electronics Engineering graduate transitioning into Software Development.
+        I build responsive and interactive web applications.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="cv.pdf" download class="btn secondary">Download CV</a>
+      </div>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an Electrical and Electronics Engineering graduate (2:1)
-      transitioning into Software Development. I build web applications
-      using HTML, CSS, JavaScript, and APIs.
-    </p>
-  </section>
+  <main>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>HTML • CSS • JavaScript • Python • Git • GitHub</p>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+      <p>
+        I am an Electrical and Electronics Engineering graduate (2:1)
+        currently transitioning into Software Development. I specialize in
+        building responsive web applications using HTML, CSS, JavaScript, and APIs.
+      </p>
+    </section>
 
-    <div class="project">
-      <h3>To-Do App</h3>
-      <img src="/media/to-do-list-app.png">
-      <p>Task management app using JavaScript</p>
-      <a href="https://github.com/gwill-dev/TO-DO-APP" target="_blank">GitHub</a><br>
-      <a href="https://gwill-dev.github.io/TO-DO-APP/" target="_blank">Live Demo</a>
-    </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
 
-    <div class="project">
-      <h3>Weather App 🌦️</h3>
-      <img src="/media/weather-long (2).png">
-      <p>Real-time weather application using API integration.</p>
-      <a href="https://gwill-dev.github.io/weather-app/" target="_blank">Live Demo</a><br>
-      <a href="https://github.com/gwill-dev/weather-app" target="_blank">GitHub</a>
-    </div>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Git</span>
+        <span>GitHub</span>
+      </div>
+    </section>
 
-    <div class="project">
-      <h3>Calculator App</h3>
-      <img src="/media/calculate-app (2).png">
-      <p>Simple calculator using JavaScript</p>
-      <a href="https://github.com/gwill-dev/calculator-app" target="_blank">GitHub</a><br>
-      <a href="https://gwill-dev.github.io/calculator-app/" target="_blank">Live Demo</a>
-    </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
 
-  </section>
+      <div class="projects-grid">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: uchegwillama@gmail.com</p>
-    <p>Phone: +234 8160651440</p>
-    <a href="https://github.com/gwill-dev" target="_blank">GitHub</a>
-  </section>
+        <div class="project-card">
+          <img src="media/to-do-list-app.png" alt="To Do App">
+
+          <h3>To-Do App</h3>
+          <p>Task management app using JavaScript.</p>
+
+          <div class="project-links">
+            <a href="https://github.com/gwill-dev/TO-DO-APP" target="_blank">GitHub</a>
+            <a href="https://gwill-dev.github.io/TO-DO-APP/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="media/weather-long-2.png" alt="Weather App">
+
+          <h3>Weather App 🌦️</h3>
+          <p>Real-time weather application using API integration.</p>
+
+          <div class="project-links">
+            <a href="https://github.com/gwill-dev/weather-app" target="_blank">GitHub</a>
+            <a href="https://gwill-dev.github.io/weather-app/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="media/calculate-app-1.png" alt="Calculator App">
+
+          <h3>Calculator App</h3>
+          <p>Simple calculator built with JavaScript.</p>
+
+          <div class="project-links">
+            <a href="https://github.com/gwill-dev/calculator-app" target="_blank">GitHub</a>
+            <a href="https://gwill-dev.github.io/calculator-app/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <p>Email: <a href="mailto:uchegwillama@gmail.com">uchegwillama@gmail.com</a></p>
+      <p>Phone: <a href="tel:+2348160651440">+234 8160651440</a></p>
+
+      <a href="https://github.com/gwill-dev" target="_blank">GitHub Profile</a>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Uchechukwu</p>
+    <p>© 2026 Uchechukwu. Built with HTML, CSS & JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
