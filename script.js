@@ -1,33 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // SCROLL ANIMATION
+  /* =============================
+     SCROLL ANIMATION (IMPROVED)
+  ============================= */
+
   const sections = document.querySelectorAll("section");
 
-  window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const trigger = window.innerHeight / 1.3;
-
-      if (sectionTop < trigger) {
-        section.classList.add("show");
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // runs once (better performance)
       }
     });
+  }, {
+    threshold: 0.15
   });
 
-  // TYPING EFFECT
-  const text = "Frontend Developer | JavaScript | API Integration";
-  let i = 0;
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+
+  /* =============================
+     TYPING EFFECT (SMOOTH + SAFE)
+  ============================= */
+
   const typingElement = document.getElementById("typing");
 
-  function typeEffect() {
-    if (i < text.length) {
-      typingElement.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeEffect, 50);
-    }
-  }
+  if (typingElement) {
+    const text = "Frontend Developer | JavaScript | API Integration";
+    let index = 0;
 
-  typingElement.innerHTML = ""; // clear first
-  typeEffect();
+    function typeEffect() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 60);
+      }
+    }
+
+    typingElement.textContent = "";
+    typeEffect();
+  }
 
 });
