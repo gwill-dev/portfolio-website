@@ -215,3 +215,11 @@ section {
   object-fit: cover;
   border: 2px solid #38bdf8;
 }
+.linkedin {
+  background: #0a66c2;
+  color: white;
+}
+
+.linkedin:hover {
+  background: #004182;
+}
