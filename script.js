@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+const text = "Building real-world web apps | JavaScript | APIs | Problem Solver";
